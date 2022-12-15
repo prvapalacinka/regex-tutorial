@@ -44,10 +44,22 @@ Quantifiers allow you to limit strings to certain parts of your regex matches, o
 Quantifiers can be classified as "greedy" matches (which is covered in a later subsection). Put simply, a greedy match will find as many occurrences of a specified pattern as possible. The various types of greedy matches are listed within the[Greedy and Lazy Match](#greedy-and-lazy-match) section of this document.  
 
 ### OR Operator
+Similar to bracket expressions, OR operators can be used to search for either specified alphanumeric characters or special characters included (or any other specific paramaters).
 
 ### Character Classes
+Character classes are used to define a set of characters that can occur in an input string. Listed below are common character classes:
+. - Matches any character other than (\n)
+\d - Matches any Arabic numbers and is equal to the expressino [0-9]. 
+\w - Matches any alphanumeric character from the Latin alphabet (as well as the underscore). Equivalent to [A-Za-z0-9]. 
+\s - Matches one whitespace character such as a tab or line break. 
+
+**Note**: any of the aforementioned last three character classes are able to perform an inverse match simply by capitalizing the letter character (i.e.: \D). 
 
 ### Flags
+Flags are the only exception to the rule that all regex literals must be wrapped in slash characters. Flags are placed at the end of the second slash and are used to specify any new functionality for the regex expression. The three (out of six) most common flags are listed and described below:
+g (Global search) - regex tests against all possible matches in a string.
+i (Case-insensitive search) - case is ignored while searching for matches in a string.
+m (Multi-line search) - multi-line input string is treated as multiple lines.
 
 ### Grouping and Capturing
 When dealing with larger stringers it is helpful to break the string up into parts to identify search parameters. This is where **grouping constructs** come into play. 
