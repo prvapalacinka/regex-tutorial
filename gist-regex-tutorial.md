@@ -1,15 +1,13 @@
 # Regex Expression Explained
 
-Regex is a shorthand term for "regular expression," which is a line of unique characters that describe a specific search pattern. Regular expressions are powerful tools used to identify specific characters, or even replace them within a string. Popular use of regex is found within input validation. 
+Regex is a shorthand term for "regular expression," which is a line of unique characters that describe a specific search pattern. Regular expressions are powerful tools used to identify specific characters, or even replace them within a string. Popular use of regex is found within input validation. Regex is a powerful tool in today's world and continues to grow in terms of its utility. Regex function notation may look strange at first but learning and practicing it will help you familiarize yourself with it soon enough. 
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
-
-NOTE: Throughout this lesson we will use the following regex expression to draw examples from:
+Throughout this lesson we will use the following regex expression to draw examples from:
 Matching an email: /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
 --
-The matching an email regex expression looks entirely cryptic at first glance, but after reading this document you will be able to identify the various search parameters and notations described within the expression. 
+The matching an email regex expression looks entirely cryptic at first glance, but after reading this document you will be able to identify the various search parameters and notations described within the expression. We will looks closely at the different components that make up a regex function so that we can dissect the given "matching an emai" regex. 
 
 ## Table of Contents
 
@@ -95,11 +93,14 @@ Lazy matches are created simply by adding a question mark (?) after a greedy exp
 
 
 ### Boundaries
+Boundaries, or (\b) is used as an assertion about the current position in a string. Other boundaries exist such as (\G), which indicates the position following the last match. We are able to look left and right in our search from a certain point in a match. 
 
 ### Back-references
+Back-references allow you to refer to a previously matched part of the expression and are signified by a backslash and a single numerical digit, like so: \1. 
+The part of the expression that the back-reference refers to is called a subexpression and is identified with parantheses. 
 
 ### Look-ahead and Look-behind
-
+Look-ahead and look-behind, or collectively called, look-around expressions, search for a match of characters and simply return the result of the match whether it is available or not. Look-around expressions are helpful in order to shorten your regex expressions before they grow too lengthy. For example, if we searched for a look-behind such as, a(?!p) then we would search for an "a" that is NOT followed by a "p." Lookbehind is also useful because you can use it anywhere in the regex, not only in the beginning. 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+Petar Vidovic is a 24 year old full stack web development student with CWRU. The author's github is linked here: https://github.com/prvapalacinka
